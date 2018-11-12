@@ -1,0 +1,7 @@
+tofile ls > comp
+mkfolder mkdir folder
+mknew mkdir mynewfolder
+
+mknew mkdir foldering
+
+sc script newscript
