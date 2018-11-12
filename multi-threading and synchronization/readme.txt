@@ -1,4 +1,4 @@
-Eda Gür & İlaydaEzgi Zengin 
+
 Project2
 
 	In project2,all parts work well.For partI, there are 4 sections for the trains that come to the tunnel and want to enter. Sections are created as seperate threads. Trains are kept in queues in their own sections(threads). Then we decide which train will enter the tunnel, with given priorities. After deciding that, the train that enter the tunnel is popped from outcoming queue. Additionally, in controller thread if there is a passing train (from section that has the largest number of trains), it locks the tunnel with a flag clearance to prevent other trains coming in the tunnel. After tunnel is cleared (when clearence flag is set to true) then mutex is unlocked and other trains in different sections(threads) can try to enter the tunnel. If there is a train in tunnel, controller sleeps with pthread_sleep method to not to let other trains enter to tunnel. For section threads, they sleep for 1 sec until their train comes to tunnel entrance to not to generate another train at the same time in the same section.Probability, seed and simulation time are taken from command line. 
